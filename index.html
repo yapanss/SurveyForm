@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" href="survey.css">
+</head>
+<body>
+
+	<div id="container">
+		<header>
+			<h1 id="title">End Of School Year Survey</h1>
+			<p id="description">A survey for my students from Lycée Moderne de Koumassi</p>
+		</header>
+		<!-- <main> -->
+			<form id="survey-form">
+				<div id="inputs">
+					<div id="nam">
+						<div>
+							<label id="name-label">Name</label>
+						</div>
+						<div>
+							<input class="inputs" type="text" name="name" placeholder="Enter your name here" id="name" required>
+						</div>
+					</div>
+					<div id="ema">
+						<label id="email-label">Email</label>
+						<input class="inputs" type="email" name="email" placeholder="Enter your emal here" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$"  required>
+					</div>
+					<div id="age">
+						<label id="number-label">Age</label>
+						<input class="inputs" type="number" min="1" max="125" name="age" placeholder="Enter your age here" id="number" required>
+					</div>
+					<div id="gender">
+						<p>You are a :</p>
+							<label id="boy"> Boy
+								<input type="radio" name="gender" value="boy">
+							</label>
+							<label id="girl">Girl
+								<input type="radio" name="gender" value="girl">
+							</label>
+					</div>
+				</div>
+				<div id="dropdowne">
+					<div id="drop">
+						<p>In which class are you :</p>
+						<select class="inputs" id="dropdown">
+							<option selected="true" disabled="disabled">Choose your class</option>
+							<option value="6e10">6e10</option>
+							<option value="1eD2">1eD2</option>
+							<option value="TD2">TD2</option>
+						</select>	
+					</div>
+					<div id="check">
+						<p>Which chapters did you like the most : </p>
+						<div id="chbx">
+							
+								chapter_1 <input type="checkbox" value="ch1">
+							
+								chapter_2 <input type="checkbox" value="ch2">
+							
+								chapter_3 <input type="checkbox" value="ch3">
+							
+								chapter_4 <input type="checkbox" value="ch4">
+							
+								chapter_5 <input type="checkbox" value="ch5">
+							
+								chapter_6 <input type="checkbox" value="ch6">
+								
+								chapter_7 <input type="checkbox" value="ch7">
+							
+						</div>
+					</div>
+				</div>
+				
+				<div id="textarea">
+						<p> Any Comment Or Suggestion ? </p>
+						<textarea placeholder="Enter your comment here" cols="50"></textarea>
+				
+				</div>
+				<div id="submite">
+					<button type="submit" id="submit">Submit</button>
+				</div>
+
+
+			</form>
+		<!-- </main> -->
+
+		<footer>
+			<p>Designed by @nnoux </p>
+		</footer>
+		
+
+	</div>
+<script src="./survey.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>

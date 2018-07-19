@@ -1,0 +1,265 @@
+#container {
+	/*height: 100%;*/
+	display: grid;
+	grid-template-rows: 100px 700px 40px;
+	grid-template-columns: 10% 80% 10%;
+	grid-template-areas: " . header ."
+						 ". main ."
+						 "footer footer footer";
+	grid-row-gap: 20px;
+}
+
+header {
+	grid-area: header;
+	background-color: #848484FF;
+	display: grid;
+	grid-template-rows: 50px 40px;
+	grid-template-areas: "title"
+						 "description";
+	grid-gap: 5px;
+}
+
+header h1 {
+	grid-area: title;
+	color: white;
+	margin-top: 5px;
+	text-align: center;
+	font-size: 2.5em;
+	/*background-color: red;*/
+}
+#description {
+	grid-area: description;
+	color: #f0ffff;
+	font-size: 1.4em;
+	margin-top: 0;
+	text-align: center;
+}
+
+form {
+	grid-area: main;
+	display: grid;
+	grid-template-rows: 300px 200px 100px 40px;
+	grid-template-areas: "input" 
+						 "dropdowne" 
+						 "textarea" 
+						 "submite";
+						 
+	grid-row-gap: 20px;
+}
+
+footer {
+	grid-area: footer;
+	background-color: blue;
+}
+
+footer p {
+	color: #fff;
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 0.5%;
+}
+
+#inputs {
+	grid-area: input;
+	background-color: #EFEFEFFF;
+	display: grid;
+	grid-template-rows: 70px 70px 70px 100px;
+	grid-template-areas: "nam"
+						 "ema"
+						 "age"
+						 "gender";
+	grid-row-gap: 10px;
+	padding: 1%;
+}
+
+#nam {
+	grid-area: nam;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-areas: "label input";
+	align-items: center;
+	padding-right: 2%;
+}
+
+#nam label {
+	margin-right: 5%;
+	font-size: 1.3em;
+	height: 30px;
+	float: right;
+	margin-right: 20%;
+}
+
+#ema {
+	grid-area: ema;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-areas: "label input";
+	align-items: center;
+	padding-right: 2%;
+}
+
+#ema label {
+	margin-right: 15%;
+	font-size: 1.3em;
+	height: 30px;
+	text-align: right;
+}
+
+#age {
+	grid-area: age;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-areas: "label input";
+	align-items: center;
+	padding-right: 2%;
+}
+
+#age label {
+	
+	margin-right: 15%;
+	font-size: 1.3em;
+	height: 30px;
+	text-align: right;
+}
+
+#gender {
+	grid-area: gender;
+				
+}
+
+#gender p {
+	font-size: 1.3em;
+	display: inline;
+	margin-left: 25%;
+}
+
+#gender #boy {
+	font-size: 1.3em;
+	margin-left: 5%;
+}
+
+#gender #girl {
+	font-size: 1.3em;
+	margin-left: 10%;
+}
+
+#dropdowne {
+	grid-area: dropdowne;
+	background-color: #EFEFEFFF;
+	display: grid;
+	grid-template-rows: 30% 55%;
+	grid-template-areas: "drop" 
+						 " check";
+	grid-row-gap: 5%;
+}
+
+#dropdowne #drop {
+	grid-area: drop;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-areas: "label input"
+
+}
+
+#drop p {
+	grid-area: label;
+	display: inline;
+	font-size: 1.3em;
+	text-align: right;
+	margin-right: 5%;
+}
+
+#drop select {
+	grid-area: input;
+	width: 80%;
+	margin-top: 2%;
+}
+
+#dropdowne #check {
+	/*background-color: lightgreen;*/
+	grid-area: check;
+	display: grid;
+	grid-template-columns: 35% 55%;
+	grid-template-areas: "label input";
+}
+
+#check p {
+	grid-area: label;
+	display: inline;
+	font-size: 1.3em;
+	text-align: right;
+}
+
+#check #chbx {
+	margin-top: 3%;
+	grid-area: input;
+	font-size: 1.3em;
+	margin-left: 5%;
+}
+
+#chbx label {
+	margin-left: 1%;
+}
+
+#textarea {
+	display: grid;
+	grid-template-columns: 30% 60%;
+	background-color: #EFEFEFFF;
+	padding: 2%;
+}
+
+#textarea p {
+	font-size: 1.3em;
+}
+
+#textarea textarea {
+	font-size: 1.3em;
+	border-radius: 5px;
+	padding: 1%;
+}
+
+#submite {
+	grid-area: submite;
+	display: grid;
+	grid-template-columns: 25% auto;
+	grid-template-areas: "button .";
+}
+
+#submite button {
+	grid-area: button;
+	background-color: #32cd32;
+	color: #fff;
+	font-size: 1.3em;
+	border-radius: 5px;
+	border: 1px solid green;
+	cursor: pointer;
+}
+
+.inputs {
+	border-radius: 5px;
+	border: 1px solid gray;
+	height: 40px;
+	width: 100%;
+	font-size: 1.2em;
+	padding-left: 10px;
+}
+
+span {
+	cursor: pointer;
+}
+
+input[type=radio] {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	background: blue;
+	margin-left: 1%;
+}
+
+input[type=checkbox] {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	background: blue;
+	margin-left: 1%;
+}
